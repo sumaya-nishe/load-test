@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-s XML file does not appear to have any style information associated with it. The document tree is shown below.
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
 <hashTree>
 <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="FrontPage" enabled="true">
@@ -30,16 +29,16 @@ s XML file does not appear to have any style information associated with it. The
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="dd12" elementType="HTTPArgument">
+<elementProp name="dd123" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">dd12</stringProp>
+<stringProp name="Argument.name">dd123</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
-<stringProp name="HTTPSampler.domain">beta.dn.no</stringProp>
+<stringProp name="HTTPSampler.domain">www.dn.no</stringProp>
 <stringProp name="HTTPSampler.port"/>
 <stringProp name="HTTPSampler.protocol">https</stringProp>
 <stringProp name="HTTPSampler.contentEncoding"/>
