@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
-	<hashTree>
-		<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="FrontPage" enabled="true">
-			<stringProp name="TestPlan.comments"/>
-			<boolProp name="TestPlan.functional_mode">false</boolProp>
-			<boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+<hashTree>
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="FrontPage" enabled="true">
+<stringProp name="TestPlan.comments"/>
+<boolProp name="TestPlan.functional_mode">false</boolProp>
+<boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
 <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
 <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
 <collectionProp name="Arguments.arguments"/>
@@ -18,7 +18,7 @@
 <boolProp name="LoopController.continue_forever">false</boolProp>
 <stringProp name="LoopController.loops">1</stringProp>
 </elementProp>
-<stringProp name="ThreadGroup.num_threads">500</stringProp>
+<stringProp name="ThreadGroup.num_threads">50</stringProp>
 <stringProp name="ThreadGroup.ramp_time">5</stringProp>
 <boolProp name="ThreadGroup.scheduler">false</boolProp>
 <stringProp name="ThreadGroup.duration"/>
@@ -29,12 +29,12 @@
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="cache1" elementType="HTTPArgument">
+<elementProp name="dd" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">cache1</stringProp>
+<stringProp name="Argument.name">dd</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
@@ -166,7 +166,7 @@
 <stringProp name="RespTimeGraph.interval">100</stringProp>
 </ResultCollector>
 <hashTree/>
-<CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="false">
+<CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
 <stringProp name="CounterConfig.start">1</stringProp>
 <stringProp name="CounterConfig.end">255</stringProp>
 <stringProp name="CounterConfig.incr">1</stringProp>
@@ -184,7 +184,7 @@ import org.apache.jmeter.protocol.http.control.Cookie; import java.util.concurre
 </stringProp>
 </BeanShellPreProcessor>
 <hashTree/>
-<HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+<HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
 <collectionProp name="HeaderManager.headers">
 <elementProp name="" elementType="Header">
 <stringProp name="Header.name">X-Forwarded-For</stringProp>
@@ -195,7 +195,7 @@ import org.apache.jmeter.protocol.http.control.Cookie; import java.util.concurre
 <hashTree/>
 <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
 <stringProp name="CounterConfig.start">10</stringProp>
-<stringProp name="CounterConfig.end">110</stringProp>
+<stringProp name="CounterConfig.end">1005</stringProp>
 <stringProp name="CounterConfig.incr">1</stringProp>
 <stringProp name="CounterConfig.name">cacheCount1</stringProp>
 <stringProp name="CounterConfig.format"/>
