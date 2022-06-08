@@ -18,7 +18,7 @@
 <boolProp name="LoopController.continue_forever">false</boolProp>
 <stringProp name="LoopController.loops">1</stringProp>
 </elementProp>
-<stringProp name="ThreadGroup.num_threads">50</stringProp>
+<stringProp name="ThreadGroup.num_threads">2000</stringProp>
 <stringProp name="ThreadGroup.ramp_time">5</stringProp>
 <boolProp name="ThreadGroup.scheduler">false</boolProp>
 <stringProp name="ThreadGroup.duration"/>
@@ -188,7 +188,7 @@ import org.apache.jmeter.protocol.http.control.Cookie; import java.util.concurre
 <collectionProp name="HeaderManager.headers">
 <elementProp name="" elementType="Header">
 <stringProp name="Header.name">X-Forwarded-For</stringProp>
-<stringProp name="Header.value">100.100.${cacheCount}.${cacheCount}</stringProp>
+<stringProp name="Header.value">100.100.${cacheCount2}.${cacheCount3}</stringProp>
 </elementProp>
 </collectionProp>
 </HeaderManager>
@@ -201,6 +201,24 @@ import org.apache.jmeter.protocol.http.control.Cookie; import java.util.concurre
 <stringProp name="CounterConfig.format"/>
 <boolProp name="CounterConfig.per_user">false</boolProp>
 </CounterConfig>
+<hashTree/>
+<CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+<stringProp name="CounterConfig.start">1</stringProp>
+<stringProp name="CounterConfig.end">255</stringProp>
+<stringProp name="CounterConfig.incr">1</stringProp>
+<stringProp name="CounterConfig.name">cacheCount2</stringProp>
+<stringProp name="CounterConfig.format"/>
+<boolProp name="CounterConfig.per_user">false</boolProp>
+</CounterConfig>
+<hashTree/>
+<RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+<stringProp name="maximumValue">255</stringProp>
+<stringProp name="minimumValue">1</stringProp>
+<stringProp name="outputFormat"/>
+<boolProp name="perThread">false</boolProp>
+<stringProp name="randomSeed">12345</stringProp>
+<stringProp name="variableName">cacheCount3</stringProp>
+</RandomVariableConfig>
 <hashTree/>
 </hashTree>
 </hashTree>
