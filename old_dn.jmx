@@ -16,7 +16,7 @@
 <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
 <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
 <boolProp name="LoopController.continue_forever">false</boolProp>
-<stringProp name="LoopController.loops">15</stringProp>
+<stringProp name="LoopController.loops">12</stringProp>
 </elementProp>
 <stringProp name="ThreadGroup.num_threads">2000</stringProp>
 <stringProp name="ThreadGroup.ramp_time">300</stringProp>
@@ -29,12 +29,12 @@
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="sdddsdsa" elementType="HTTPArgument">
+<elementProp name="rtgfgfgfgf" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">sdddsdsa</stringProp>
+<stringProp name="Argument.name">rtgfgfgfgf</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
