@@ -18,7 +18,7 @@
 <boolProp name="LoopController.continue_forever">false</boolProp>
 <stringProp name="LoopController.loops">20</stringProp>
 </elementProp>
-<stringProp name="ThreadGroup.num_threads">1000</stringProp>
+<stringProp name="ThreadGroup.num_threads">2000</stringProp>
 <stringProp name="ThreadGroup.ramp_time">300</stringProp>
 <boolProp name="ThreadGroup.scheduler">false</boolProp>
 <stringProp name="ThreadGroup.duration">500</stringProp>
@@ -29,12 +29,12 @@
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="cvvbjhhjcf" elementType="HTTPArgument">
+<elementProp name="cfhghg" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">cvvbjhhjcf</stringProp>
+<stringProp name="Argument.name">cfhghg</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
