@@ -21,7 +21,7 @@
 <stringProp name="ThreadGroup.num_threads">2000</stringProp>
 <stringProp name="ThreadGroup.ramp_time">300</stringProp>
 <boolProp name="ThreadGroup.scheduler">true</boolProp>
-<stringProp name="ThreadGroup.duration">600</stringProp>
+<stringProp name="ThreadGroup.duration">360</stringProp>
 <stringProp name="ThreadGroup.delay"/>
 <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
 </ThreadGroup>
@@ -196,8 +196,8 @@ ${cacheCount3}.${cacheCount4}.${cacheCount5}.${cacheCount6}
 </HeaderManager>
 <hashTree/>
 <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-<stringProp name="CounterConfig.start">2000</stringProp>
-<stringProp name="CounterConfig.end">2300</stringProp>
+<stringProp name="CounterConfig.start">3000</stringProp>
+<stringProp name="CounterConfig.end">3300</stringProp>
 <stringProp name="CounterConfig.incr">1</stringProp>
 <stringProp name="CounterConfig.name">cacheCount1</stringProp>
 <stringProp name="CounterConfig.format"/>
@@ -205,8 +205,8 @@ ${cacheCount3}.${cacheCount4}.${cacheCount5}.${cacheCount6}
 </CounterConfig>
 <hashTree/>
 <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-<stringProp name="CounterConfig.start">1</stringProp>
-<stringProp name="CounterConfig.end">255</stringProp>
+<stringProp name="CounterConfig.start">10</stringProp>
+<stringProp name="CounterConfig.end">100</stringProp>
 <stringProp name="CounterConfig.incr">1</stringProp>
 <stringProp name="CounterConfig.name">cacheCount2</stringProp>
 <stringProp name="CounterConfig.format"/>
@@ -336,7 +336,7 @@ ${cacheCount3}.${cacheCount4}.${cacheCount5}.${cacheCount6}
 <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
 <stringProp name="variableName">cacheCount4</stringProp>
 <stringProp name="outputFormat"/>
-<stringProp name="minimumValue">1</stringProp>
+<stringProp name="minimumValue">200</stringProp>
 <stringProp name="maximumValue">255</stringProp>
 <stringProp name="randomSeed">12345</stringProp>
 <boolProp name="perThread">false</boolProp>
@@ -346,7 +346,7 @@ ${cacheCount3}.${cacheCount4}.${cacheCount5}.${cacheCount6}
 <stringProp name="variableName">cacheCount5</stringProp>
 <stringProp name="outputFormat"/>
 <stringProp name="minimumValue">1</stringProp>
-<stringProp name="maximumValue">255</stringProp>
+<stringProp name="maximumValue">155</stringProp>
 <stringProp name="randomSeed">12345</stringProp>
 <boolProp name="perThread">false</boolProp>
 </RandomVariableConfig>
