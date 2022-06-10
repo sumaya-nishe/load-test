@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
 <hashTree>
 <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="FrontPage" enabled="true">
 <stringProp name="TestPlan.comments"/>
@@ -16,29 +15,29 @@
 <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
 <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
 <boolProp name="LoopController.continue_forever">false</boolProp>
-<stringProp name="LoopController.loops">10</stringProp>
+<stringProp name="LoopController.loops">1</stringProp>
 </elementProp>
-<stringProp name="ThreadGroup.num_threads">2000</stringProp>
-<stringProp name="ThreadGroup.ramp_time">300</stringProp>
+<stringProp name="ThreadGroup.num_threads">500</stringProp>
+<stringProp name="ThreadGroup.ramp_time">5</stringProp>
 <boolProp name="ThreadGroup.scheduler">false</boolProp>
-<stringProp name="ThreadGroup.duration">500</stringProp>
+<stringProp name="ThreadGroup.duration"/>
 <stringProp name="ThreadGroup.delay"/>
-<boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+<boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
 </ThreadGroup>
 <hashTree>
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="rtgfgfgfgf" elementType="HTTPArgument">
+<elementProp name="cache1" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">rtgfgfgfgf</stringProp>
+<stringProp name="Argument.name">cache1</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
-<stringProp name="HTTPSampler.domain">beta.dn.no</stringProp>
+<stringProp name="HTTPSampler.domain">www.dn.no</stringProp>
 <stringProp name="HTTPSampler.port"/>
 <stringProp name="HTTPSampler.protocol">https</stringProp>
 <stringProp name="HTTPSampler.contentEncoding"/>
@@ -166,15 +165,6 @@
 <stringProp name="RespTimeGraph.interval">100</stringProp>
 </ResultCollector>
 <hashTree/>
-<CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-<stringProp name="CounterConfig.start">1</stringProp>
-<stringProp name="CounterConfig.end">255</stringProp>
-<stringProp name="CounterConfig.incr">1</stringProp>
-<stringProp name="CounterConfig.name">cacheCount</stringProp>
-<stringProp name="CounterConfig.format"/>
-<boolProp name="CounterConfig.per_user">false</boolProp>
-</CounterConfig>
-<hashTree/>
 <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
 <boolProp name="resetInterpreter">false</boolProp>
 <stringProp name="parameters"/>
@@ -184,181 +174,14 @@ import org.apache.jmeter.protocol.http.control.Cookie; import java.util.concurre
 </stringProp>
 </BeanShellPreProcessor>
 <hashTree/>
-<HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-<collectionProp name="HeaderManager.headers">
-<elementProp name="" elementType="Header">
-<stringProp name="Header.name">X-Forwarded-For</stringProp>
-<stringProp name="Header.value">
-${cacheCount3}.${cacheCount4}.${cacheCount5}.${cacheCount6}
-</stringProp>
-</elementProp>
-</collectionProp>
-</HeaderManager>
-<hashTree/>
 <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-<stringProp name="CounterConfig.start">2000</stringProp>
-<stringProp name="CounterConfig.end">2300</stringProp>
+<stringProp name="CounterConfig.start">10</stringProp>
+<stringProp name="CounterConfig.end">110</stringProp>
 <stringProp name="CounterConfig.incr">1</stringProp>
 <stringProp name="CounterConfig.name">cacheCount1</stringProp>
 <stringProp name="CounterConfig.format"/>
 <boolProp name="CounterConfig.per_user">false</boolProp>
 </CounterConfig>
-<hashTree/>
-<CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-<stringProp name="CounterConfig.start">1</stringProp>
-<stringProp name="CounterConfig.end">255</stringProp>
-<stringProp name="CounterConfig.incr">1</stringProp>
-<stringProp name="CounterConfig.name">cacheCount2</stringProp>
-<stringProp name="CounterConfig.format"/>
-<boolProp name="CounterConfig.per_user">false</boolProp>
-</CounterConfig>
-<hashTree/>
-<RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-<stringProp name="maximumValue">255</stringProp>
-<stringProp name="minimumValue">1</stringProp>
-<stringProp name="outputFormat"/>
-<boolProp name="perThread">false</boolProp>
-<stringProp name="randomSeed">12345</stringProp>
-<stringProp name="variableName">cacheCount3</stringProp>
-</RandomVariableConfig>
-<hashTree/>
-<ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
-<boolProp name="ResultCollector.error_logging">false</boolProp>
-<objProp>
-<name>saveConfig</name>
-<value class="SampleSaveConfiguration">
-<time>true</time>
-<latency>true</latency>
-<timestamp>true</timestamp>
-<success>true</success>
-<label>true</label>
-<code>true</code>
-<message>true</message>
-<threadName>true</threadName>
-<dataType>true</dataType>
-<encoding>false</encoding>
-<assertions>true</assertions>
-<subresults>true</subresults>
-<responseData>false</responseData>
-<samplerData>false</samplerData>
-<xml>false</xml>
-<fieldNames>true</fieldNames>
-<responseHeaders>false</responseHeaders>
-<requestHeaders>false</requestHeaders>
-<responseDataOnError>false</responseDataOnError>
-<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-<assertionsResultsToSave>0</assertionsResultsToSave>
-<bytes>true</bytes>
-<sentBytes>true</sentBytes>
-<url>true</url>
-<threadCounts>true</threadCounts>
-<idleTime>true</idleTime>
-<connectTime>true</connectTime>
-</value>
-</objProp>
-<stringProp name="filename"/>
-</ResultCollector>
-<hashTree/>
-<ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
-<boolProp name="ResultCollector.error_logging">false</boolProp>
-<objProp>
-<name>saveConfig</name>
-<value class="SampleSaveConfiguration">
-<time>true</time>
-<latency>true</latency>
-<timestamp>true</timestamp>
-<success>true</success>
-<label>true</label>
-<code>true</code>
-<message>true</message>
-<threadName>true</threadName>
-<dataType>true</dataType>
-<encoding>false</encoding>
-<assertions>true</assertions>
-<subresults>true</subresults>
-<responseData>false</responseData>
-<samplerData>false</samplerData>
-<xml>false</xml>
-<fieldNames>true</fieldNames>
-<responseHeaders>false</responseHeaders>
-<requestHeaders>false</requestHeaders>
-<responseDataOnError>false</responseDataOnError>
-<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-<assertionsResultsToSave>0</assertionsResultsToSave>
-<bytes>true</bytes>
-<sentBytes>true</sentBytes>
-<url>true</url>
-<threadCounts>true</threadCounts>
-<idleTime>true</idleTime>
-<connectTime>true</connectTime>
-</value>
-</objProp>
-<stringProp name="filename"/>
-</ResultCollector>
-<hashTree/>
-<ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
-<boolProp name="ResultCollector.error_logging">false</boolProp>
-<objProp>
-<name>saveConfig</name>
-<value class="SampleSaveConfiguration">
-<time>true</time>
-<latency>true</latency>
-<timestamp>true</timestamp>
-<success>true</success>
-<label>true</label>
-<code>true</code>
-<message>true</message>
-<threadName>true</threadName>
-<dataType>true</dataType>
-<encoding>false</encoding>
-<assertions>true</assertions>
-<subresults>true</subresults>
-<responseData>false</responseData>
-<samplerData>false</samplerData>
-<xml>false</xml>
-<fieldNames>true</fieldNames>
-<responseHeaders>false</responseHeaders>
-<requestHeaders>false</requestHeaders>
-<responseDataOnError>false</responseDataOnError>
-<saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-<assertionsResultsToSave>0</assertionsResultsToSave>
-<bytes>true</bytes>
-<sentBytes>true</sentBytes>
-<url>true</url>
-<threadCounts>true</threadCounts>
-<idleTime>true</idleTime>
-<connectTime>true</connectTime>
-</value>
-</objProp>
-<stringProp name="filename"/>
-</ResultCollector>
-<hashTree/>
-<RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-<stringProp name="variableName">cacheCount4</stringProp>
-<stringProp name="outputFormat"/>
-<stringProp name="minimumValue">1</stringProp>
-<stringProp name="maximumValue">100</stringProp>
-<stringProp name="randomSeed">12345</stringProp>
-<boolProp name="perThread">false</boolProp>
-</RandomVariableConfig>
-<hashTree/>
-<RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-<stringProp name="variableName">cacheCount5</stringProp>
-<stringProp name="outputFormat"/>
-<stringProp name="minimumValue">100</stringProp>
-<stringProp name="maximumValue">200</stringProp>
-<stringProp name="randomSeed">12345</stringProp>
-<boolProp name="perThread">false</boolProp>
-</RandomVariableConfig>
-<hashTree/>
-<RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-<stringProp name="variableName">cacheCount6</stringProp>
-<stringProp name="outputFormat"/>
-<stringProp name="minimumValue">200</stringProp>
-<stringProp name="maximumValue">255</stringProp>
-<stringProp name="randomSeed">12345</stringProp>
-<boolProp name="perThread">false</boolProp>
-</RandomVariableConfig>
 <hashTree/>
 </hashTree>
 </hashTree>
