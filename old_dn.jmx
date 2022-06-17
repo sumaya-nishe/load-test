@@ -29,12 +29,12 @@
 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pré-définies" enabled="true">
 <collectionProp name="Arguments.arguments">
-<elementProp name="rtgfgfgfgf12" elementType="HTTPArgument">
+<elementProp name="rtgfgfgfgf123" elementType="HTTPArgument">
 <boolProp name="HTTPArgument.always_encode">false</boolProp>
 <stringProp name="Argument.value">${cacheCount1}</stringProp>
 <stringProp name="Argument.metadata">=</stringProp>
 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-<stringProp name="Argument.name">rtgfgfgfgf12</stringProp>
+<stringProp name="Argument.name">rtgfgfgfgf123</stringProp>
 </elementProp>
 </collectionProp>
 </elementProp>
